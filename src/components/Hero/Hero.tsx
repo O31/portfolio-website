@@ -12,13 +12,22 @@ function Hero() {
             <h2 className="hero-title">Full Stack Developer</h2>
             <p className="hero-tagline">kood/Jõhvi Graduate | Rust, Go, React</p>
             <div className="hero-actions">
-              <a href="#projects" className="btn btn--primary">
+              <a href="#projects" className="btn btn--primary" rel="noopener noreferrer">
                 View Projects
               </a>
-              <a href="#" className="btn btn--outline" target="_blank">
+              <a
+                href="https://github.com/O31"
+                className="btn btn--outline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Download CV
               </a>
-              <a href="#contact" className="btn btn--secondary">
+              <a
+                href="https://github.com/O31"
+                className="btn btn--secondary"
+                rel="noopener noreferrer"
+              >
                 Contact Me
               </a>
             </div>

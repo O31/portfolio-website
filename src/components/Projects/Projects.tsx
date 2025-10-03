@@ -1,14 +1,6 @@
 import React, { useState } from "react"
 import "./Projects.css"
 
-type Project = {
-  icon: string
-  title: string
-  description: string
-  tech: string[]
-  highlights: string[]
-}
-
 const PROJECTS = [
   {
     icon: "🌐",
@@ -88,10 +80,10 @@ function Projects() {
                   ))}
                 </div>
                 <div className="project-actions">
-                  <a href="#" className="project-link">
+                  <a href="https://github.com/O31" className="project-link">
                     GitHub
                   </a>
-                  <a href="#" className="project-link">
+                  <a href="https://github.com/O31" className="project-link">
                     Live Demo
                   </a>
                   <button
