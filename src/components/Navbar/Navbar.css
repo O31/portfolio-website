@@ -1,0 +1,116 @@
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(var(--color-surface), 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-16) 0;
+}
+
+.nav-brand {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xl);
+  color: var(--color-text);
+}
+
+.nav-menu {
+  display: flex;
+  gap: var(--space-32);
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--duration-fast) var(--ease-standard);
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary);
+}
+
+.nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width var(--duration-normal) var(--ease-standard);
+}
+
+.nav-link:hover:after,
+.nav-link.active:after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: var(--space-8);
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  font-size: var(--font-size-lg);
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-secondary);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: var(--space-8);
+  cursor: pointer;
+}
+
+.hamburger {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-text);
+  position: relative;
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-text);
+  transition: all var(--duration-fast) var(--ease-standard);
+}
+
+.hamburger:before {
+  top: -6px;
+}
+
+.hamburger:after {
+  top: 6px;
+}

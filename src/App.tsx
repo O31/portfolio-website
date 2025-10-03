@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import About from "./components/About/About"
+import Contact from "./components/Contact/Contact"
+import Experience from "./components/Experience/Experience"
+import Footer from "./components/Footer/Footer"
+import Hero from "./components/Hero/Hero"
+import Navbar from "./components/Navbar/Navbar"
+import Projects from "./components/Projects/Projects"
+import Skills from "./components/Skills/Skills"
+import React from "react"
+import { useState, useEffect } from "react"
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true)
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-color-scheme", darkMode ? "dark" : "light")
+  }, [darkMode])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Hero />
+      <About />
+      <Projects />
+      <Skills />
+      <Experience />
+      <Contact />
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

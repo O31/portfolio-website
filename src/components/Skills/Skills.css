@@ -1,0 +1,67 @@
+.skills {
+  background-color: var(--color-surface);
+}
+
+.skills-content {
+  display: grid;
+  gap: var(--space-32);
+}
+
+.skills-category {
+  background-color: var(--color-background);
+  padding: var(--space-24);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+}
+
+.category-title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-20);
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-16);
+}
+
+.skill-item {
+  background-color: var(--color-surface);
+  padding: var(--space-16);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-card-border);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-8);
+}
+
+.skill-name {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-md);
+}
+
+.skill-percentage {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.skill-bar {
+  height: 8px;
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-teal-400));
+  border-radius: var(--radius-full);
+  width: 0;
+  transition: width 1s var(--ease-standard) 0.3s;
+}
