@@ -1,7 +1,11 @@
 import React from "react"
 import "./Contact.css"
 
-const Contact: React.FC = () => {
+interface ContactProps {
+  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void
+}
+
+const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
   return (
     <section className="contact" id="contact">
       <div className="container">
@@ -56,6 +60,7 @@ const Contact: React.FC = () => {
             name="contact"
             method="POST"
             data-netlify="true"
+            onSubmit={onSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />

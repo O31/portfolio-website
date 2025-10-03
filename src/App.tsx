@@ -11,20 +11,36 @@ import { useState, useEffect } from "react"
 
 function App() {
   const [darkMode, setDarkMode] = useState(true)
+  const [popUp, setPopUp] = useState(false)
 
   useEffect(() => {
     document.documentElement.setAttribute("data-color-scheme", darkMode ? "dark" : "light")
   }, [darkMode])
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    const form = e.target as HTMLFormElement
+    const formData = new FormData(form)
+
+    await fetch("/", {
+      method: "POST",
+      body: formData,
+    })
+
+    form.reset()
+    setPopUp(true)
+  }
+
   return (
     <div>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Hero />
+      <Hero popUp={popUp} setPopUp={setPopUp} />
       <About />
       <Projects />
       <Skills />
       <Experience />
-      <Contact />
+      <Contact onSubmit={handleSubmit} />
       <Footer />
     </div>
   )

@@ -1,7 +1,12 @@
-import React from "react"
 import "./Hero.css"
+import Popup from "../PopUp/PopUp"
 
-function Hero() {
+interface popUpProps {
+  popUp: boolean
+  setPopUp: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+function Hero({ popUp, setPopUp }: popUpProps) {
   return (
     <section className="hero" id="home">
       <div className="container">
@@ -43,6 +48,7 @@ function Hero() {
         <span className="scroll-text">Scroll down</span>
         <div className="scroll-arrow">↓</div>
       </div>
+      {popUp && <Popup setPopUp={setPopUp} />}
     </section>
   )
 }
