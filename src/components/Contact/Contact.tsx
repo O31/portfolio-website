@@ -50,7 +50,15 @@ const Contact: React.FC = () => {
               </div>
             </div>
           </div>
-          <form className="contact-form" id="contact-form">
+          <form
+            className="contact-form"
+            id="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
             <div className="form-group">
               <label htmlFor="name" className="form-label">
                 Name
