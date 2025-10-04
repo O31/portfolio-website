@@ -29,7 +29,7 @@ function App() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(searchParams).toString(),
     })
-      .then(() => console.log("Form successfully submitted"))
+      .then(() => console.log("Form successfully submitted", formData))
       .catch((error) => alert(error))
 
     setPopUp(true)
