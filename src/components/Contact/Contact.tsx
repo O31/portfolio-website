@@ -62,7 +62,6 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
             data-netlify="true"
             onSubmit={onSubmit}
           >
-            <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
             <div className="form-group">
               <label htmlFor="name" className="form-label">
