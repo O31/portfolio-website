@@ -2,18 +2,18 @@ import React from "react"
 import "./Skills.css"
 
 const programming = [
-  { name: "Rust", percent: 85 },
-  { name: "Go", percent: 80 },
-  { name: "JavaScript", percent: 85 },
-  { name: "TypeScript", percent: 75 },
-  { name: "React", percent: 80 },
   { name: "HTML/CSS", percent: 90 },
+  { name: "JavaScript", percent: 65 },
+  { name: "Go", percent: 60 },
+  { name: "TypeScript", percent: 55 },
+  { name: "Rust", percent: 55 },
+  { name: "React", percent: 50 },
 ]
 const tools = [
-  { name: "Git", percent: 90 },
-  { name: "Docker", percent: 70 },
-  { name: "Linux", percent: 80 },
-  { name: "Jira", percent: 75 },
+  { name: "Jira", percent: 55 },
+  { name: "Linux", percent: 50 },
+  { name: "Git", percent: 50 },
+  { name: "Docker", percent: 40 },
 ]
 
 type SkillBarProps = {

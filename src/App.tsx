@@ -22,13 +22,16 @@ function App() {
 
     const form = e.target as HTMLFormElement
     const formData = new FormData(form)
+    const searchParams = new URLSearchParams(formData as any).toString()
 
     await fetch("/", {
       method: "POST",
-      body: formData,
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(searchParams).toString(),
     })
+      .then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error))
 
-    form.reset()
     setPopUp(true)
   }
 
